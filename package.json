@@ -1,0 +1,14 @@
+{
+  "name": "jobapplicationapp",
+  "version": "1.0.0",
+  "description": "Job Application as Backend Developer",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Faustin I",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
