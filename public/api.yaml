@@ -1,0 +1,90 @@
+         
+definitions:
+  category:
+    type: object
+    required:
+      - name
+      - description
+    properties:
+      name:
+        type: string
+      description:
+         type: string    
+  movie:
+    type: object
+    required:
+      - title
+      - category,
+      - image
+      - description
+    properties:
+      title:
+        type: string
+      category:
+         type: string
+      image: 
+        type: string
+      description:
+        type: string                   
+paths:
+  /api/v1/categories:          
+    post:                
+      tags:               
+        - Categories        
+      summary: Register a Movie Category
+      requestBody:
+        required: true
+        content: 
+          application/json:
+            schema:
+              $ref: '#/definitions/category'            
+      responses:
+        '201':
+          description: Category added Successfully
+        '500':
+          description: Internal server error
+        '400':
+          description: Bad Request
+
+  /api/v1/all/categories:  
+    get:                 
+      tags:               
+        - Categories         
+      summary: Get all categories          
+      responses:
+        '200':
+          description: List of categories
+        '500':
+          description: Internal server error        
+  /api/v1/all/movies:  
+    get:                 
+      tags:               
+        - Movies         
+      summary: Get all categories          
+      responses:
+        '200':
+          description: List of categories
+        '500':
+          description: Internal server error        
+            
+  /api/v1/movies:          
+    post:                
+      tags:               
+        - Movies        
+      summary: Register a Movie
+      requestBody:
+        required: true
+        content: 
+          application/json:
+            schema:
+              $ref: '#/definitions/movie'            
+      responses:
+        '201':
+          description: Movie added Successfully
+        '500':
+          description: Internal server error
+        '400':
+          description: Bad Request
+        
+
+
