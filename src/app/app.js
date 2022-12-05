@@ -2,7 +2,8 @@ import express from "express";
 import swaggerUI from 'swagger-ui-express'
 import swaggerJsDoc from 'swagger-jsdoc'
 
-import indexRouter from "./routes/index";
+import indexRouter from "./routes/index"
+import { handleErrorResponse } from "../core/helpers/responseHelper";
 
 const options={
   definition:{
@@ -47,7 +48,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/', indexRouter);
 
 app.use('*', (req, res) => {
-  res.status(404).json({message:'Not Found'});
+  return handleErrorResponse(res, 404, "Route Not Found", [],false);
 });
 
 export default app;

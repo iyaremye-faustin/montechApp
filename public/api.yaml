@@ -60,10 +60,10 @@ paths:
     get:                 
       tags:               
         - Movies         
-      summary: Get all categories          
+      summary: Get all movies          
       responses:
         '200':
-          description: List of categories
+          description: List of movies
         '500':
           description: Internal server error        
             
@@ -85,6 +85,74 @@ paths:
           description: Internal server error
         '400':
           description: Bad Request
+  
+  /api/v1/{id}/movies:  
+    get:                 
+      tags:               
+        - Movies         
+      summary: Get a Movie By id
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+        description: Movie Id           
+      responses:
+        '200':
+          description: Movie By Id
+        '500':
+          description: Internal server error
+
+  /api/v1/{id}/movies/delete:  
+    delete:                 
+      tags:               
+        - Movies         
+      summary: Delete a Movie
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+        description: Movie Id           
+      responses:
+        '200':
+          description: Deleted
+        '500':
+          description: Internal server error
+  
+  /api/v1/{id}/movies/update:           
+    patch:                 
+      tags:               
+        - Movies         
+      summary: Update Movie
+      parameters:
+      - in: path
+        name: id
+        schema:
+          type: integer
+        required: true
+        description: Movie Id 
+      requestBody:
+        required: true
+        content: 
+          application/json:
+            schema:
+              properties:
+                title:
+                  type: string
+                description:
+                  type: string
+                image:
+                  type: string     
+      responses:
+        '200':
+          description: Movie is successfully updated
+        '500':
+          description: Internal server error
+        '404':
+          description: Object not found  
         
 
 
