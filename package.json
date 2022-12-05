@@ -10,7 +10,7 @@
     "deMigrate": "npx sequelize-cli db:migrate:undo:all",
     "deMigrate:all:test": "cross-env NODE_ENV=test npx sequelize-cli db:migrate:undo:all",
     "dbMigrate:test": "cross-env NODE_ENV=test npx sequelize-cli db:migrate",
-    "test": "npm run deMigrate:all:test && npm run dbMigrate:test && cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text-summary mocha --recursive --exit true -t 40000 --require @babel/register"
+    "test": "npm run deMigrate:all:test && npm run dbMigrate:test && cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text-summary mocha --recursive --exit true -t 400000 --require @babel/register"
   },
   "author": "Faustin I",
   "license": "ISC",
