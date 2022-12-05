@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon --exec babel-node src/index.js",
-    "build":"mkdir dist && babel src -s -d dist",
-    "start": "node dist",
+    "build":"mkdir dist && npm i && babel src -s -d dist",
+    "start": "node ./dist",
     "dbMigrate": "npx sequelize-cli db:migrate",
     "undoMigrate": "npx sequelize-cli db:migrate:undo",
     "deMigrate": "npx sequelize-cli db:migrate:undo:all",
