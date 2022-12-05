@@ -15,10 +15,10 @@ module.exports={
     database: process.env.TEST_DB_NAME,
     host: process.env.TEST_DB_HOST,
     dialect: process.env.DB_DIALECT,
-    logging: false,
-    dialectOptions: {
-      ssl: { require: true, rejectUnauthorized: false }
-    }
+    // logging: false,
+    // dialectOptions: {
+    //   ssl: { require: false, rejectUnauthorized: false }
+    // }
   },
   production: {
     username: process.env.DB_USERNAME,

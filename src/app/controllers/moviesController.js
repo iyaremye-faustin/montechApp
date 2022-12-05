@@ -28,7 +28,7 @@ export const addMovie=async(req,res)=>{
     }
     const {movie,error}= await newMovie(newMovieObject);
     if(!error && movie){
-      return handleResponse(res, 201, "Movie added", [],true);
+      return handleResponse(res, 201, "Movie added", movie,true);
     }
     return handleErrorResponse(res, 500, 'Unable to create a movie', error,false);
   }
