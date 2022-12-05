@@ -12,7 +12,7 @@
  const server= http.createServer(app);
  const serverPort = process.env.PORT || 3000;
  
- const connectServer=()=>{
+ const connectServer=()=>{ 
    server.listen(serverPort,async()=>{
      console.log(`\nServer Started & Listening on PORT: ${serverPort}\n`);
      await sequelize
