@@ -41,5 +41,16 @@
     "cross-env": "^7.0.3",
     "mocha": "^10.1.0",
     "sequelize-cli": "^6.5.2"
+  },
+  "nyc": {
+    "extension": [
+      ".js"
+    ],
+    "reporter": [
+      "lcov",
+      "text",
+      "json-summary"
+    ],
+    "all": "true"
   }
 }
