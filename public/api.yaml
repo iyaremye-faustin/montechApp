@@ -154,5 +154,33 @@ paths:
         '404':
           description: Object not found  
         
+  /api/v1/{movie}/movies/category/update:           
+    patch:                 
+      tags:               
+        - Movies         
+      summary: Update Movie
+      parameters:
+      - in: path
+        name: movie
+        schema:
+          type: integer
+        required: true
+        description: Movie Id 
+      requestBody:
+        required: true
+        content: 
+          application/json:
+            schema:
+              properties:
+                category:
+                  type: string     
+      responses:
+        '200':
+          description: Movie category is successfully updated
+        '500':
+          description: Internal server error
+        '404':
+          description: Object not found
+
 
 

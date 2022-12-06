@@ -15,21 +15,23 @@ module.exports = (sequelize, DataTypes) => {
       });
     }
   }
-  MovieCategory.init({
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false
+  MovieCategory.init(
+    {
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      description: {
+        type: DataTypes.STRING,
+        allowNull: false
+      }
     },
-    description: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-  },
-  {
-    sequelize,
-    modelName: 'MovieCategory',
-    tableName: 'movie_categories',
-    timestamps: true
-  });
+    {
+      sequelize,
+      modelName: 'MovieCategory',
+      tableName: 'movie_categories',
+      timestamps: true
+    }
+  );
   return MovieCategory;
 };

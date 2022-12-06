@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 
 dotenv.config();
-module.exports={
+module.exports = {
   development: {
     username: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
@@ -14,7 +14,7 @@ module.exports={
     password: process.env.TEST_DB_PASSWORD,
     database: process.env.TEST_DB_NAME,
     host: process.env.TEST_DB_HOST,
-    dialect: process.env.DB_DIALECT,
+    dialect: process.env.DB_DIALECT
     // logging: false,
     // dialectOptions: {
     //   ssl: { require: false, rejectUnauthorized: false }

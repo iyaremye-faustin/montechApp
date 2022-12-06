@@ -11,24 +11,24 @@ module.exports = {
       },
       title: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       },
       image: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
       },
       description: {
         type: Sequelize.TEXT,
-        allowNull: false,
+        allowNull: false
       },
-      category_id:{
-        type:Sequelize.INTEGER,
-        allowNull: false,
+      category_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
-      rating:{
-        type:Sequelize.INTEGER,
+      rating: {
+        type: Sequelize.INTEGER,
         allowNull: false,
-        defaultValue:0
+        defaultValue: 0
       },
       createdAt: {
         allowNull: false,
